@@ -2,8 +2,9 @@ import web
 
 from web.contrib.template import render_jinja
 from db import Database
- 
-url_prefix = 'http://localhost:8080/'
+from sys import argv
+
+url_prefix = argv[1] if len(argv) > 1 else 'http://127.0.0.1/'
 urls = (
     '/', 'Shorten',
     '/assets/(.+)', 'Assets',
@@ -97,8 +98,4 @@ class Assets:
             raise web.notfound()
 
 if __name__ == "__main__":
-    from sys import argv
-    if len(argv) > 2:
-        url_prefix = argv[2]
-    print "Prefix: %s" % url_prefix
     app.run()
