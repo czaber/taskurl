@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="info_msg">
+  Your address <span class="original_url">{{ url }}</span> is shorter:
+</div>
+
+<ul>
+  <li> Short URL: 
+    <a href="{{ prefix}}{{ short_uri }}">{{ prefix }}<span class="uri">{{ short_uri }}</span></a>
+    <span class="hint">(<em>hint</em>: you don't need to write the whole id, 6 or 7 first characters is often enough)</span>
+  </li>
+</div>
+{% if easy_uri %}
+  <li> Easy URL:
+    <a href="{{ prefix }}{{ easy_uri }}">{{ prefix }}<span class="uri">{{ easy_uri }}</span></a>
+  </li>
+{% endif %}
+{% endblock %}
+</ul>

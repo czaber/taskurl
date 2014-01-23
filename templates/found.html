@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="info_msg">
+  Found more than one URL. Please, choose one:
+</div>
+
+<ul>
+{% for url in urls %}
+  <li><a href="{{ url.url }}">
+    (<span class="short_url">{{ prefix }}{{ url.short_uri }}</span>)&nbsp;
+    <span class="original_url">{{ url.url }}</span>
+  </a></li>
+{% endfor %}
+</ul>
+{% endblock %}

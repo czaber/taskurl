@@ -1,0 +1,49 @@
+body {
+  padding: 1em;
+  font-family: 'Signika Negative', Helvetica, Arial;
+}
+
+.short_url {
+  text-decoration: italic;
+}
+
+.original_url {
+  font-weight: bolder;
+}
+
+#url {
+  width: 26em;
+}
+
+#suffix {
+  width: 23em;
+}
+
+.uri {
+  font-weight: bolder;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.error_msg {
+  display: inline-block;
+  padding: 15px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+.info_msg {
+  display: inline-block;
+  padding: 15px;
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
