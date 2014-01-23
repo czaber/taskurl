@@ -4,7 +4,7 @@ from web.contrib.template import render_jinja
 from db import Database
 from sys import argv
 
-url_prefix = argv[1] if len(argv) > 1 else 'http://127.0.0.1/'
+url_prefix = argv[2] if len(argv) > 2 else 'http://127.0.0.1/'
 urls = (
     '/', 'Shorten',
     '/assets/(.+)', 'Assets',
