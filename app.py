@@ -97,4 +97,8 @@ class Assets:
             raise web.notfound()
 
 if __name__ == "__main__":
+    from sys import argv
+    if len(argv) > 2:
+        url_prefix = argv[2]
+    print "Prefix: %s" % url_prefix
     app.run()
